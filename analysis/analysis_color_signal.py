@@ -25,6 +25,22 @@ if __name__ == "__main__":
         action="store_true",
         help="Show the labels after each step.",
     )
+    parser.add_argument(
+        "--save-jpg",
+        action="store_true",
+        help="Save output figures as JPG.",
+    )
+    parser.add_argument(
+        "--save-npz",
+        action="store_true",
+        help="Save output figures as NPZ.",
+    )
     args = parser.parse_args()
 
-    analysis_color_signal(Rig, Path(args.config), args.show)
+    analysis_color_signal(
+        Rig,
+        Path(args.config),
+        args.show,
+        args.save_jpg,
+        args.save_npz,
+    )
