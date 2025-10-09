@@ -3,12 +3,11 @@ comment = "Intro session based on glass beads experiments"
 
 [data]
 #folder = r"\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF glass beads\\050825_glass_beads_1_150_s"
-folder = "E:\\fluidflower_glass_beads\\images"
+folder = "E:\\fluidflower_glass_beads\\images"   # Folder with images
 format = "JPG"                                   # The format of the images
 pad = 5                                          # number of relevant digits in image names, e.g. 00001.JPG
 baseline = "DSC00160.JPG"                        # The baseline image
-results = "E:\\fluidflower_glass_beads\\results"
-log = "E:\\fluidflower_glass_beads\\log"
+results = "E:\\fluidflower_glass_beads\\results" # Main output folder
 
 [specs]
 dim = 2         # dimension of the model
@@ -74,7 +73,15 @@ calibration_images = [
     "E:\\fluidflower_glass_beads\\images\\DSC62260.JPG",
 ]
 calibration_file = "./data/color_signal.json"
+analysis_times = [1, 5, 10, 20, 21, 40]
 
 [mass]
 calibration_image_times = [1, 5, 10, 20]
 calibration_file = "./data/mass_calibration.json"
+
+[analysis.cropping]
+image_times = [1, 5, 10, 20, 21, 40]
+[analysis.color_signal]
+image_times = [1, 5, 10, 20, 21, 40]
+[analysis.mass]
+image_times = [1, 5, 10, 20, 21, 40]
