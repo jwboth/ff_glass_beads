@@ -1,10 +1,12 @@
-"""Script to perform color signal calibration."""
+"""Setp 1 of calibration. Calibration of color signal."""
 
 import argparse
 from pathlib import Path
 import logging
 
-from darsia.presets.workflows.calibration_color_signal import calibration_color_signal
+from darsia.presets.workflows.calibration.calibration_color_signal import (
+    calibration_color_signal,
+)
 from darsia.presets.workflows.rig import Rig
 
 logger = logging.getLogger(__name__)
