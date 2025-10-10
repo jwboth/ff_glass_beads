@@ -1,9 +1,4 @@
-"""Step 1 of workflow (continued).
-
-Convert depth measurements from csv to a structured format for analysis,
-and define a depth map for the Fluidflower rig through interpolation.
-
-"""
+"""Step 1 of setup. Setup of depth map."""
 
 import argparse
 from pathlib import Path
@@ -26,5 +21,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     config = Path(args.config)
 
-    # Call standard workflow for setting up a depth map
     setup_depth_map(config, key="mean", show=args.show)

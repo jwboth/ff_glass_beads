@@ -1,14 +1,8 @@
-"""Step 2 of workflow.
-
-Define a geometric segmentation of the uncorrected baseline image.
-
-This requires a suitably colored image as input for the automatic segmentation.
-
-"""
+"""Step 2 of setup. Setup of label image."""
 
 import argparse
 import logging
-from darsia.presets.workflows.setup_labeling import segment_colored_image
+from darsia.presets.workflows.setup.setup_labeling import segment_colored_image
 
 logging.basicConfig(level=logging.INFO)
 
