@@ -8,7 +8,7 @@ and define a depth map for the Fluidflower rig through interpolation.
 import argparse
 from pathlib import Path
 
-from darsia.presets.workflows.setup_depth import setup_depth_map
+from darsia.presets.workflows.setup.setup_depth import setup_depth_map
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process depth measurements.")
