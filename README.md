@@ -1,6 +1,6 @@
-# FF Glass Beads Project
+# FluidFlower Glass Beads Project
 
-This repository contains code and data for the FF Glass Beads project.
+This repository contains code and data for the DarSIA analysis of the FluidFlower glass beads experiments.
 
 ## Folder Structure
 
