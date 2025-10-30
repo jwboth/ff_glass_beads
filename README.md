@@ -13,7 +13,7 @@ README.md                   # Project documentation
 data/                       # Contains protocol and related data files
     protocol.xlsx
 src/                        # Source code for the project
-utils/                      # Utility scripts
+utils/                      # Utility scripts for downloading images from resfys and constructing image datetime correlation files
     download.py
     setup_imaging_protocol.py
 ```
