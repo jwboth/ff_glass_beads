@@ -1,0 +1,35 @@
+[id]
+run_id = "Run 050825"
+
+[data]
+folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 24-25 glass beads\\050825_glass_beads_1_150_s"
+baseline = "DSC00160.JPG"
+results = "E:\\fluidflower_glass_beads\\run050825\\results"
+
+
+[protocols]
+injection = ["./data/protocol.xlsx", "injection"]
+imaging = ["./data/protocol.xlsx", "imaging"]
+pressure_temperature = ["./data/protocol.xlsx", "pressure_temperature"]
+
+# Calibration
+[color_paths]
+ignore_labels = []
+resolution = 51
+num_segments = 3
+threshold_baseline = 0.0
+threshold_calibration = 1e-5 #1e-4 # 1e-3
+baseline_image_paths = [
+    "DCS25231.JPG",
+    "DCS25232.JPG",
+    "DCS25233.JPG",
+    "DCS25234.JPG",
+    "DCS25235.JPG",
+    "DCS25236.JPG",
+]
+calibration_image_times = [1, 2, 3, 4, 5, 12, 24, 48, 72, 96]
+reference_label = 7
+
+[color_to_mass]
+calibration_image_times = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 24, 48, 72, 96]
+#calibration_image_times = [1, 5, 8, 12, 48, 72, 96]

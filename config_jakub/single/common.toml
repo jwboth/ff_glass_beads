@@ -1,0 +1,38 @@
+[rig]
+dim = 2       # dimension of the model
+width = 2.745 # width of the model in m
+height = 1.5  # height of the model in m
+
+[depth]
+measurements = "./data/depth_measurements.csv"
+
+[labeling]
+colored_image = "./data/refined_segmented_DSC00160.png"
+
+[facies]
+id = [1, 2, 3]
+props = "./data/facies.xlsx"
+[facies.1]
+labels = [0]
+[facies.2]
+labels = [1]
+[facies.3]
+labels = [2]
+
+[curvature.init]
+horizontal_bulge = 1e-9
+vertical_bulge = 0.0
+[curvature.crop]
+pts_src = [[734, 85], [5213, 114], [5182, 8086], [716, 8090]]
+width = 2.745
+height = 1.5
+[curvature.bulge]
+horizontal_bulge = -1.3244902496792662e-09
+vertical_bulge = -4.637586886784494e-09
+horizontal_center_offset = 153
+vertical_center_offset = -342
+[curvature.stretch]
+horizontal_stretch = -3.606015332647378e-09
+horizontal_center_offset = -579
+vertical_stretch = -0.0
+vertical_center_offset = 405
