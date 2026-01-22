@@ -17,12 +17,21 @@ pressure_temperature = ["./data/protocol.xlsx", "pressure_temperature"]
 [color_paths]
 ignore_labels = [0, 1]
 resolution = 51
+num_segments = 3
 threshold_baseline = 0.0
-threshold_calibration = 1e-3
+threshold_calibration = 1e-5
 baseline_images = ["DSC00155.JPG", "DSC00160.JPG", "DSC00162.JPG"]
-calibration_images = ["DSC05260.JPG", "DSC25260.JPG", "DSC62260.JPG"]
 reference_label = 5
 
+[color_paths.data.image_time_interval.calibration]
+start = "05:00:00"
+end = "140:00:00"
+num = 5
+tol = "00:10:00"
+
 # Calibration of color signal to mass
-[color_to_mass]
-calibration_image_times = [1, 5, 8, 12, 48, 72, 96]
+[color_to_mass.data.image_time_interval.calibration]
+start = "05:00:00"
+end = "140:00:00"
+num = 5
+tol = "00:10:00"

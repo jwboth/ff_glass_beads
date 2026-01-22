@@ -8,22 +8,31 @@ measurements = "./data/depth_measurements.csv"
 
 [labeling]
 colored_image = "./data/refined_segmented_DSC00160.png"
+#colored_image = "./data/clean_segmented_DSC00160.png"
 
 [facies]
-id = [1, 2, 3]
-props = "./data/facies.xlsx"
+id = [0, 1, 2, 3, 4, 5]      #, 6]
+props = "./data/facies.xlsx" # excel file with facies properties
+[facies.0] # Facies (id as in the excel file)
+labels = [0] # labels in the label image obtained from segmentation 
 [facies.1]
-labels = [0]
-[facies.2]
 labels = [1]
-[facies.3]
+[facies.2]
 labels = [2]
+[facies.3]
+labels = [3]
+[facies.4]
+labels = [4]
+[facies.5]
+labels = [5]
+#[facies.6]
+#labels = [6]
 
 [curvature.init]
 horizontal_bulge = 1e-9
 vertical_bulge = 0.0
 [curvature.crop]
-pts_src = [[734, 85], [5213, 114], [5182, 8086], [716, 8090]]
+pts_src = [[381, 158], [4920, 137], [4938, 7732], [425, 7734]]
 width = 2.745
 height = 1.5
 [curvature.bulge]
