@@ -11,8 +11,8 @@ colored_image = "./data/refined_segmented_DSC00160.png"
 #colored_image = "./data/clean_segmented_DSC00160.png"
 
 [facies]
-id = [0, 1, 2, 3, 4, 5]      #, 6]
 props = "./data/facies.xlsx" # excel file with facies properties
+id = [0, 1, 2, 3, 4]         #, 5]      #, 6]
 [facies.0] # Facies (id as in the excel file)
 labels = [0] # labels in the label image obtained from segmentation 
 [facies.1]
@@ -23,8 +23,8 @@ labels = [2]
 labels = [3]
 [facies.4]
 labels = [4]
-[facies.5]
-labels = [5]
+#[facies.5]
+#labels = [5]
 #[facies.6]
 #labels = [6]
 
