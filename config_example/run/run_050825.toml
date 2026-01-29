@@ -9,9 +9,9 @@ results = "E:\\fluidflower_glass_beads\\run050825\\results"
 
 # Experimental metadata
 [protocols]
-injection = ["./data/protocol.xlsx", "injection"]
-imaging = ["./data/protocol.xlsx", "imaging"]
-pressure_temperature = ["./data/protocol.xlsx", "pressure_temperature"]
+injection = ["./data/protocol_050825.xlsx", "injection"]
+imaging = ["./data/protocol_050825.xlsx", "imaging"]
+pressure_temperature = ["./data/protocol_050825.xlsx", "pressure_temperature"]
 
 # Calibration of color paths
 [color_paths]
