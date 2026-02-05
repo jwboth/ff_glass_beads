@@ -12,15 +12,15 @@ A central item for all steps is the `analysis.toml` file are the `[analysis.data
 ## Cropping raw images
 For presentation purposes it is helpful to just geometrically process the raw images into the main ROI. This step is here referred to as 'cropping'. Use the flag `--cropping` to invoke cropping of the chosen images (see above):
 
-```python
-python scripts/analysis --cropping --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
+```bash
+python scripts/analysis.py --cropping --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
 ```
 
 ## Mass 
 The calibrated mass analysis can be applied to batches of images and convert images to spatial mass maps. These will be stored as `npz` files in your common `results` folder. These files cannot be investigated visually but provide the basis for further analysis. Note that the step of converting an image to its mass interpretation is costly and thus should be considered to be performed only once for multiple analysis steps (detailed in the notebook on post-analysis).
 
 ```bash
-python scripts/analysis --mass --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
+python scripts/analysis.py --mass --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
 ```
 
 It is possible to restrict the mass analysis to regions of interest (ROI). For this, in the config file, one can add as many sections `[analysis.mass.roi.TEXT]` with separate identifiers `TEXT` of the form:
@@ -38,5 +38,5 @@ corner_2 = [2.745, 1.5]
 
 ## Segmentation
 ```bash
-python scripts/analysis --segmentation --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
+python scripts/analysis.py --segmentation --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
 ```
