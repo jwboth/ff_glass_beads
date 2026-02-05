@@ -57,7 +57,7 @@ Next we can run the calibration script, which identifies run-specific characteri
 The aim will be to run the command:
 
 ```bash
-python scripts/setup.py --color-paths --config my_config/single/common.toml my_config/run/run_050825.toml
+python scripts/calibration.py --color-paths --config my_config/single/common.toml my_config/run/run_050825.toml
 ``` 
 
 Again, we will need to pay attention to the config files.
@@ -74,5 +74,5 @@ Open once again `my_config/run/run_050825.toml`, and check out the `[color_paths
 ## Calibration of color-based mass analysis
 
 ```bash
-python scripts/setup.py --mass --config my_config/single/common.toml my_config/run/run_050825.toml
+python scripts/calibration.py --mass --config my_config/single/common.toml my_config/run/run_050825.toml
 ``` 
