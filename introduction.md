@@ -70,3 +70,9 @@ Open once again `my_config/run/run_050825.toml`, and check out the `[color_paths
 - `end`: Define the end of the calibration interval in the format HH:MM:SS
 - `num`: Define the number of equidistant times considered for calibration
 - `tol`: Define a tolerance which will be allowed if images with exact desired acquisition time are not available. A close one will be chosen then within the provided tolerance. Use the format HH:MM:SS.
+
+## Calibration of color-based mass analysis
+
+```bash
+python scripts/setup.py --mass --config my_config/single/common.toml my_config/run/run_050825.toml
+``` 
