@@ -15,10 +15,6 @@ For presentation purposes it is helpful to just geometrically process the raw im
 ```python
 python scripts/analysis --cropping --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
 ```
-<button onclick="navigator.clipboard.writeText('python scripts/analysis --cropping --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml')">
-Copy command
-</button>
-
 
 ## Mass 
 The calibrated mass analysis can be applied to batches of images and convert images to spatial mass maps. These will be stored as `npz` files in your common `results` folder. These files cannot be investigated visually but provide the basis for further analysis. Note that the step of converting an image to its mass interpretation is costly and thus should be considered to be performed only once for multiple analysis steps (detailed in the notebook on post-analysis).
@@ -26,9 +22,6 @@ The calibrated mass analysis can be applied to batches of images and convert ima
 ```bash
 python scripts/analysis --mass --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
 ```
-<button onclick="navigator.clipboard.writeText('python scripts/analysis --mass --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml')">
-Copy command
-</button>
 
 It is possible to restrict the mass analysis to regions of interest (ROI). For this, in the config file, one can add as many sections `[analysis.mass.roi.TEXT]` with separate identifiers `TEXT` of the form:
 
@@ -47,6 +40,3 @@ corner_2 = [2.745, 1.5]
 ```bash
 python scripts/analysis --segmentation --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml
 ```
-<button onclick="navigator.clipboard.writeText('python scripts/analysis --segmentation --config config_example/single/common.toml config_example/run/run_XYZ.toml config_example/single/analysis.toml')">
-Copy command
-</button>

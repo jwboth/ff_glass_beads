@@ -14,9 +14,6 @@ The first step is the setup. The general way of invoking it, is to run:
 ```bash
 python scripts/setup.py --all --config your_config1.toml your_config2.toml (--show)
 ```
-<button onclick="navigator.clipboard.writeText('python scripts/setup.py --all --config your_config1.toml your_config2.toml (--show)')">
-Copy command
-</button>
 
 Here, it is important to provide config files that characterize both common as well as run-specific properties. One can gather these within a single config file or multiple ones (recommended). If one is interested in intermediate results being displayed, include the flag `--show`.
 
@@ -35,9 +32,6 @@ Create your copy of the folder `config_example`, here called `my_config`. You wi
 ```bash
 python scripts/setup.py --all --config my_config/single/common.toml my_config/run/run_050825.toml
 ```
-<button onclick="navigator.clipboard.writeText('python scripts/setup.py --all --config my_config/single/common.toml my_config/run/run_050825.toml')">
-Copy command
-</button>
 
 Let's have a look at the required modifications. 
 1. Open `my_config/run/run_050825.toml` to adapt run-specific metainformation in the `[data]` section:
@@ -65,9 +59,6 @@ The aim will be to run the command:
 ```bash
 python scripts/setup.py --color-paths --config my_config/single/common.toml my_config/run/run_050825.toml
 ``` 
-<button onclick="navigator.clipboard.writeText('python scripts/setup.py --color-paths --config my_config/single/common.toml my_config/run/run_050825.toml')">
-Copy command
-</button>
 
 Again, we will need to pay attention to the config files.
 
