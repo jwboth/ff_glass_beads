@@ -4,36 +4,28 @@ A DarSIA analysis consists of setup, calibration and actual analysis. This noteb
 ## Quick introduction to the terminal and how to interact with DarSIA
 All the routines are fully defined as part of DarSIA. These scripts just envoke predefined workflows. The main user-input consists of prescribing the right metadata incl. paths, protocols etc. 
 
-To run any scripts, the recommended way is to use the terminal. This notebook displays the commands that need to be run inside the terminal, and these could also be run from here. Yet, notebooks do not provide simple ways of displaying visual outputs. Thus, e.g., for any interactive calibration steps it is required to use the terminal.
+To run any scripts, the recommended way is to use the terminal. For this the example  commands in this file need to be copied and modified.
 
-The main usage will consist of calling `python <script.py> --flags flag_options` to run a given script with flags linking to config files, and also to instruct the particular DarSIA methods for setup etc.
-
-## Setup
-The first step is the setup. The general way of invoking it, is to run:
-
+To run a given script with flags, and also to instruct the particular DarSIA, the main usage will consist of calling routines of the form:
 ```bash
-python scripts/setup.py --all --config your_config1.toml your_config2.toml (--show)
+python <scripts.py> --some-flags
 ```
 
-Here, it is important to provide config files that characterize both common as well as run-specific properties. One can gather these within a single config file or multiple ones (recommended). If one is interested in intermediate results being displayed, include the flag `--show`.
+## Create your own config files
 
-The main input consists of metainformation on the actual experiment and data acquisition:
-- Path to folder with images for particular run (as part of run-specifig config)
-- Excel sheet identifying images and acquisition time for particular run (example given in `data/)
-- Excel sheet with injection protocol for particular run
-- Excel sheet with experimental conditions (pressure and temperature in time) for particular run
-- Excel sheet with point measurements of depth of the rig
-- Png image with manual segmentation of the facies of the geometry in form of a colored image, based on any raw image
+Create your copy of the folder `config_example`, here called `my_config`. While these files are meant as template, you will need to both adapt the copied config files and also the paths in the following commands.
 
-## Getting started
+Note, that the config files are split into multiple config giles, separating common information and run-specific information. This separation is not stricklty needed, but recommended. The main changes needed to be performed are the location to the data, wehere results are stored etc. Some more details are provided in the following sections on setup, calibration and analysis.
 
-Create your copy of the folder `config_example`, here called `my_config`. You will need to adapt the paths in both files. You will need to adapt some config files, but eventually, our aim will be to run the command:
+## Setup
 
 ```bash
 python scripts/setup.py --all --config my_config/single/common.toml my_config/run/run_050825.toml
 ```
 
-Let's have a look at the required modifications. 
+If interested in intermediate results, add the flag `--show`.
+
+Let's have a look at the required modifications of the config files. 
 1. Open `my_config/run/run_050825.toml` to adapt run-specific metainformation in the `[data]` section:
 - `folder`: adjust the path to the raw images
 - `baseline`: identfy the main baseline image 
@@ -51,7 +43,7 @@ Let's have a look at the required modifications.
 - `id`: List the relevant id's of the segmentation (may not be clear a prior - you may want to run the setup with `--show` flag first and get an idea of what id's are available).
 - `[facies.N]`: Link facies `N` (see excel sheet representation of lab measurements) with label `id` (DarSIA interpretation of the segmentation). For this, you need to modify the `labels` list and list all relevant `id` values.
 
-## Calibration of color paths
+## Calibration of pH indicator specific color paths
 Next we can run the calibration script, which identifies run-specific characteristic colors in a small set of calibration images.
 
 The aim will be to run the command:
@@ -71,7 +63,9 @@ Open once again `my_config/run/run_050825.toml`, and check out the `[color_paths
 - `num`: Define the number of equidistant times considered for calibration
 - `tol`: Define a tolerance which will be allowed if images with exact desired acquisition time are not available. A close one will be chosen then within the provided tolerance. Use the format HH:MM:SS.
 
-## Calibration of color-based mass analysis
+## Calibration of color-based CO2 mass analysis
+
+Next, we run the calibration of the mass analysis, i.e., the conversion of colors to CO2 mass.
 
 ```bash
 python scripts/calibration.py --mass --config my_config/single/common.toml my_config/run/run_050825.toml
