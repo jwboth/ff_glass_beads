@@ -1,24 +1,11 @@
 #[analysis.data.image_paths.all]
 #paths = "*0.JPG"
 
-
 [analysis.data.image_time_interval.phase_1]
 start = "01:00:00"
 end = "05:00:00"
 num = 5
 tol = "00:01:00"
-
-#[analysis.data.image_time_interval.phase_1]
-#start = "00:00:00"
-#end = "05:00:00"
-#num = 6
-#tol = "00:01:00"
-
-#[analysis.data.image_time_interval.phase_2]
-#start = "12:00:00"
-#end = "96:00:00"
-#num = 6
-#tol = "00:10:00"
 
 ## For download of raw images to local filesystem
 #[analysis.data.image_time_interval.calibration1]
