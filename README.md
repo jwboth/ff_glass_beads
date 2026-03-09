@@ -2,7 +2,7 @@
 
 > **A comprehensive interface to DarSIA analysis for the FluidFlower glass beads experiments (2025-2026)**
 
-This repository serves as both an **operational workflow** and **learning material** for performing CO₂-water multiphase flow analysis on FluidFlower glass bead experiments using the [DarSIA](https://github.com/darsiaproject/darsia) framework.
+This repository serves as both an **operational workflow** and **learning material** for performing CO₂-water multiphase flow analysis on FluidFlower glass bead experiments using the [DarSIA](https://github.com/pmgbergen/darsia) framework.
 
 ---
 
@@ -88,26 +88,26 @@ Example segmentation result showing CO₂ phases in the FluidFlower:
 ### 1️⃣ **Setup Phase**
 Prepare geometry and baseline calibration:
 ```bash
-python scripts/setup.py --all --config config_example/single/common.toml config_example/run/run_050825.toml --show
+python scripts/setup.py --all --config config_example/single/common.toml config_example/run/run_exp_1.toml --show
 ```
 
 ### 2️⃣ **Calibration Phase**
 Calibrate color-to-CO₂ conversion:
 ```bash
-python scripts/calibration.py --color-paths --config config_example/single/common.toml config_example/run/run_050825.toml
-python scripts/calibration.py --mass --config config_example/single/common.toml config_example/run/run_050825.toml
+python scripts/calibration.py --color-paths --config config_example/single/common.toml config_example/run/run_exp_1.toml
+python scripts/calibration.py --mass --config config_example/single/common.toml config_example/run/run_exp_1.toml
 ```
 
 ### 3️⃣ **Analysis Phase**
 Analyze experimental data:
 ```bash
-python scripts/analysis.py --all --config config_example/single/common.toml config_example/run/run_050825.toml config_example/single/analysis.toml
+python scripts/analysis.py --all --config config_example/single/common.toml config_example/run/run_exp_1.toml config_example/single/analysis.toml
 ```
 
 ### 4️⃣ **Post-Analysis**
 Extract integrated quantities and visualizations:
 ```bash
-python scripts/post_analysis.py --config config_example/single/common.toml config_example/run/run_050825.toml config_example/single/analysis.toml
+python scripts/post_analysis.py --config config_example/single/common.toml config_example/run/run_exp_1.toml config_example/single/analysis.toml
 ```
 
 ---
@@ -126,7 +126,7 @@ python scripts/post_analysis.py --config config_example/single/common.toml confi
 
 ## 🔧 Prerequisites
 
-- **Python 3.9+**
+- **Python 3.10+**
 - **DarSIA** - Install via: `pip install darsia`
 - **Image data** - Raw JPG images from FluidFlower experiments
 - **Protocol files** - Excel spreadsheets with timing/injection/pressure data
@@ -176,9 +176,7 @@ This is a learning and research repository. To contribute:
 
 ## 📖 References
 
-- **DarSIA Documentation**: [darsia.readthedocs.io](https://darsia.readthedocs.io)
-- **FluidFlower Project**: [RWTH Aachen SAUERBRUNN](https://www.sauerbrunn-project.de)
-- **Related Publications**: See introduction.md for literature references
+- **DarSIA GitHub**: [github.com/pmgbergen/darsia](https://github.com/pmgbergen/darsia)
 
 ---
 
@@ -194,7 +192,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 - **Debug mode**: Add `--show` flag to visualize intermediate results
 - **Reuse configs**: Adapt existing configurations rather than creating from scratch
-- **Check example runs**: `config_example/run/` contains working configurations
+- **Check example runs**: `config_example/` contains working configurations
 - **Explore TODOs**: See [TODO.md](TODO.md) for known limitations and improvements
 
 ---
