@@ -5,13 +5,29 @@ run_id = "Run 050825"
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 24-25 glass beads\\050825_glass_beads_1_150_s"
 baseline = "DSC00160.JPG"
-results = "E:\\fluidflower_glass_beads\\run050825\\results"
+results = "E:\\fluidflower_glass_beads\\run_exp_1\\results"
+
+# For download of raw images to local filesystem
+[download.data.image_time_interval.calibration1]
+start = "01:00:00"
+end = "23:00:00"
+num = 5
+tol = "00:10:00"
+
+[download.data.image_time_interval.calibration2]
+start = "24:00:00"
+end = "140:00:00"
+num = 5
+tol = "00:10:00"
 
 # Experimental metadata
 [protocols]
-injection = ["./data/protocol_050825.xlsx", "injection"]
-imaging = ["./data/protocol_050825.xlsx", "imaging"]
-pressure_temperature = ["./data/protocol_050825.xlsx", "pressure_temperature"]
+injection = ["./data_example/protocol_exp_1.xlsx", "injection"]
+imaging = ["./data_example/protocol_exp_1.xlsx", "imaging"]
+pressure_temperature = [
+    "./data_example/protocol_exp_1.xlsx",
+    "pressure_temperature",
+]
 
 # Calibration of color paths
 [color_paths]
@@ -20,18 +36,32 @@ resolution = 51
 num_segments = 3
 threshold_baseline = 0.0
 threshold_calibration = 1e-5
-baseline_images = ["DSC00155.JPG", "DSC00160.JPG", "DSC00162.JPG"]
 reference_label = 5
 
-[color_paths.data.image_time_interval.calibration]
-start = "05:00:00"
+[color_paths.baseline.image_paths.calibration]
+paths = ["baseline/DSC00155.JPG", "DSC00160.JPG", "baseline/DSC00162.JPG"]
+
+[color_paths.data.image_time_interval.calibration1]
+start = "01:00:00"
+end = "23:00:00"
+num = 5
+tol = "00:10:00"
+
+[color_paths.data.image_time_interval.calibration2]
+start = "24:00:00"
 end = "140:00:00"
 num = 5
 tol = "00:10:00"
 
 # Calibration of color signal to mass
-[color_to_mass.data.image_time_interval.calibration]
-start = "05:00:00"
-end = "140:00:00"
+[color_to_mass.data.image_time_interval.calibration1]
+start = "01:00:00"
+end = "23:00:00"
 num = 5
 tol = "00:10:00"
+
+#[color_to_mass.data.image_time_interval.calibration2]
+#start = "24:00:00"
+#end = "140:00:00"
+#num = 5
+#tol = "00:10:00"
