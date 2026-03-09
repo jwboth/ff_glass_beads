@@ -7,19 +7,6 @@ folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 24-25
 baseline = "DSC00160.JPG"
 results = "E:\\fluidflower_glass_beads\\run_exp_1\\results"
 
-# For download of raw images to local filesystem
-[download.data.image_time_interval.calibration1]
-start = "01:00:00"
-end = "23:00:00"
-num = 5
-tol = "00:10:00"
-
-[download.data.image_time_interval.calibration2]
-start = "24:00:00"
-end = "140:00:00"
-num = 5
-tol = "00:10:00"
-
 # Experimental metadata
 [protocols]
 injection = ["./data_example/protocol_exp_1.xlsx", "injection"]
