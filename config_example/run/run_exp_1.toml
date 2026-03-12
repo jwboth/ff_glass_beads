@@ -52,3 +52,9 @@ tol = "00:10:00"
 #end = "140:00:00"
 #num = 5
 #tol = "00:10:00"
+
+# Denoising using a simple averaging filter.
+[restoration]
+method = "volume_average"
+[restoration.options]
+rev_size = 0.01 # meters
