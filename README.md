@@ -36,52 +36,12 @@ This repository serves as both an **operational workflow** and **learning materi
 
 Example segmentation result showing CO₂ phases in the FluidFlower:
 
-![Segmented FluidFlower Image](data/refined_segmented_DSC00160_a.png)
+<!-- ![Segmented FluidFlower Image](data/refined_segmented_DSC00160_a.png)-->
 
 *The image shows the facies segmentation of the glass bead geometry with different colored regions representing different sand layers.*
 
 ---
 
-## 🏗️ Project Structure
-
-```
-├── README.md                          # This file
-├── introduction.md                    # Workflow overview & getting started
-├── analysis.md                        # Analysis steps & post-processing
-├── image_selection.md                 # Image selection methods documentation
-├── finger_analysis.md                 # Fingering analysis configuration
-├── LICENSE                            # MIT License
-│
-├── config_example/                    # Example configuration files
-│   ├── single/                        # Single-run configurations
-│   │   ├── common.toml               # Common settings across runs
-│   │   ├── analysis.toml             # Analysis configuration
-│   │   └── ...
-│   ├── run/                          # Run-specific configurations
-│   │   ├── run_exp_1.toml
-│   │   └── run_exp_4_flush.toml
-│   └── multi/                        # Multi-run analysis configurations
-│
-├── data/                              # Data files and resources
-│   ├── protocol_050825.xlsx           # Imaging/injection/pressure protocols
-│   ├── facies.xlsx                    # Facies properties
-│   ├── depth_measurements.csv         # Depth measurements
-│   ├── refined_segmented_DSC00160_a.png  # Reference segmentation
-│   └── ...
-│
-├── scripts/                           # Main analysis scripts
-│   ├── setup.py                       # Geometry setup and calibration
-│   ├── calibration.py                 # Color path calibration
-│   ├── analysis.py                    # Image analysis pipeline
-│   ├── post_analysis.py               # Post-processing & integration
-│   └── comparison.py                  # Inter-run comparisons
-│
-└── utils/                             # Utility scripts
-    ├── setup_imaging_protocol.py      # EXIF extraction tool
-    └── download.py                    # Image download utility
-```
-
----
 
 ## 🎯 Typical Workflow
 
@@ -127,7 +87,7 @@ python scripts/post_analysis.py --config config_example/single/common.toml confi
 ## 🔧 Prerequisites
 
 - **Python 3.10+**
-- **DarSIA** - Install via: `pip install darsia`
+- **DarSIA** - Install by following instructions at [DarSIA](https://github.com/pmgbergen/darsia)
 - **Image data** - Raw JPG images from FluidFlower experiments
 - **Protocol files** - Excel spreadsheets with timing/injection/pressure data
 
@@ -171,12 +131,6 @@ This is a learning and research repository. To contribute:
 2. Document changes in relevant `.md` files
 3. Keep configuration examples functional and well-commented
 4. Update this README if adding new analysis types
-
----
-
-## 📖 References
-
-- **DarSIA GitHub**: [github.com/pmgbergen/darsia](https://github.com/pmgbergen/darsia)
 
 ---
 
