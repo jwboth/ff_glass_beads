@@ -45,13 +45,7 @@ def get_creation_time(filepath: Path) -> datetime:
 
     """
     stat = filepath.stat()
-    try:
-        # macOS and some Linux filesystems
-        timestamp = stat.st_mtime
-    except AttributeError:
-        # Windows: st_ctime is creation time
-        # Linux: st_ctime is metadata change time (best available fallback)
-        timestamp = stat.st_mtime
+    timestamp = stat.st_mtime
     return datetime.fromtimestamp(timestamp)
 
 
