@@ -1,0 +1,69 @@
+# Run specific configuration for experiment 4 - flush
+[id]
+run_id = "Experiment 4 - Flush"
+
+# Data management
+[data]
+folder = "E:\\flush exp 4"
+baseline = "DSC04574.JPG"
+results = "E:\\fluidflower_glass_beads\\run_exp_4_flush"
+
+# Experimental metadata
+[protocols]
+imaging = ["./data_example/protocol_exp_4_flush.xlsx", "imaging"]
+blacklist = ["./data_example/protocol_exp_4_flush.xlsx", "blacklist"]
+injection = ["./data_example/protocol_exp_4_flush.xlsx", "injection"]
+pressure_temperature = [
+    "./data_example/protocol_exp_4_flush.xlsx",
+    "pressure_temperature",
+]
+
+[corrections]
+#color = true
+
+## Preprocessing routines
+#[preprocessing]
+#resize = 0.5
+#format = "float32"
+
+## Correction routines 
+#[correction]
+#active = ["drift", "color_correction"] #, "illumination_correction"]
+#[correction.drift]
+#baseline = "DSC04574.JPG"
+#[correction.color_correction]
+#baseline = "DSC04574.JPG"
+#[correction.illumination_correction]
+#baseline = "DSC04574.JPG"
+
+# Calibration of color paths
+[color_paths]
+ignore_labels = [0]
+resolution = 51
+num_segments = 1
+threshold_baseline = 0.0
+threshold_calibration = 1e-5
+baseline_images = ["DSC04574.JPG"]
+reference_label = 5
+[color_paths.baseline.image_paths.calibration]
+paths = ["DSC04574.JPG"]
+[color_paths.data.image_paths.calibration]
+paths = ["DSC04639.JPG"]
+
+# Calibration of color to volume (for tracer)
+[color_to_volume]
+mode = "manual"
+fluid = "tracer"
+[color_to_volume.data.image_paths.calibration]
+paths = ["*4580*"]
+#paths = ["*4639*"]
+#paths = ["*04574*", "*0.JPG"]
+
+# Calibration of color to mass
+[color_to_mass]
+mode = "manual"
+fluid = "tracer"
+[color_to_mass.data.image_paths.calibration]
+paths = ["*4580*"]
+#paths = ["*4639*"]
+#paths = ["*04574*", "*0.JPG"]

@@ -1,9 +1,11 @@
 [id]
-run_id = "Run 050825"
+run_id = "Run 1"
 
 # Data management
 [data]
-folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 24-25 glass beads\\050825_glass_beads_1_150_s"
+#folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 24-25 glass beads\\050825_glass_beads_1_150_s"
+#folder = "E:\\fluidflower_glass_beads\\run_exp_1\\results\\raw_data"
+folder = "E:\\fluidflower_glass_beads\\data\\exp1"
 baseline = "DSC00160.JPG"
 results = "E:\\fluidflower_glass_beads\\run_exp_1\\results"
 
@@ -28,6 +30,12 @@ reference_label = 5
 [color_paths.baseline.image_paths.calibration]
 paths = ["baseline/DSC00155.JPG", "DSC00160.JPG", "baseline/DSC00162.JPG"]
 
+[color_paths.data.image_time_interval.calibration0]
+start = "01:00:00"
+end = "23:00:00"
+num = 5
+tol = "00:10:00"
+
 [color_paths.data.image_time_interval.calibration1]
 start = "01:00:00"
 end = "23:00:00"
@@ -41,11 +49,14 @@ num = 5
 tol = "00:10:00"
 
 # Calibration of color signal to mass
-[color_to_mass.data.image_time_interval.calibration1]
-start = "01:00:00"
-end = "23:00:00"
-num = 5
-tol = "00:10:00"
+#[color_to_mass.data.image_time_interval.calibration1]
+#start = "01:00:00"
+#end = "23:00:00"
+#num = 5
+#tol = "00:10:00"
+
+[color_to_mass.data.image_paths.calibration1]
+paths = ["*.JPG"]
 
 #[color_to_mass.data.image_time_interval.calibration2]
 #start = "24:00:00"
