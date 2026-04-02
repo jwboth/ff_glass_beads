@@ -1,11 +1,15 @@
 [id]
-run_id = "Run 4"
+run_id = "Run 3"
 
 # Data management
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_3_subset_20min_4h"
 baseline = "DSC22892.JPG"
-results = "E:\\fluidflower_glass_beads\\run_exp_3\\results"
+results = "E:\\fluidflower_glass_beads\\run_exp_3\\results_develop"
+
+# Selection of basline images
+[data.path.baseline]
+paths = ["DSC22892.JPG", "DSC22888.JPG", "DSC22887.JPG"]
 
 # Experimental metadata
 [protocols]
@@ -22,48 +26,16 @@ ignore_labels = [0, 1]       # water and top layer
 resolution = 51
 num_segments = 3
 threshold_baseline = 0.0
-threshold_calibration = 1e-4 # Needs tuning (1e-5 too low).
+threshold_calibration = 1e-5 # 1e-4 # Needs tuning (1e-5 too low).
 reference_label = 5          # black - yellow transition.
+data = ["phase1", "phase5"]
+baseline = "baseline"
+#rois = ["roi1", "roi2"]
 
-[color_paths.baseline.image_paths.calibration]
-paths = ["DSC22892.JPG", "DSC22888.JPG", "DSC22887.JPG"]
-
-[color_paths.data.image_time_interval.calibration1]
-start = "00:15:00"
-end = "00:15:00"
-num = 1
-tol = "00:10:00"
-
-[color_paths.data.image_time_interval.calibration2]
-start = "01:00:00"
-end = "10:00:00"
-num = 5
-tol = "00:10:00"
-
-[color_paths.data.image_time_interval.calibration3]
-start = "20:00:00"
-end = "90:00:00"
-num = 4
-tol = "00:45:00"
 
 # Calibration of color signal to mass
-[color_to_mass.data.image_time_interval.calibration1]
-start = "00:15:00"
-end = "00:15:00"
-num = 1
-tol = "00:10:00"
-
-[color_to_mass.data.image_time_interval.calibration2]
-start = "01:00:00"
-end = "10:00:00"
-num = 5
-tol = "00:10:00"
-
-[color_to_mass.data.image_time_interval.calibration3]
-start = "20:00:00"
-end = "90:00:00"
-num = 4
-tol = "00:45:00"
+[color_to_mass]
+data = ["phase1", "phase5"]
 
 # Denoising using a simple averaging filter.
 [restoration]

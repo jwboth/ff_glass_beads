@@ -1,66 +1,23 @@
-#[analysis.data.image_paths.all]
-#paths = "*0.JPG"
-
-[analysis.data.image_time_interval.phase_1]
-start = "01:00:00"
-end = "05:00:00"
-num = 5
-tol = "00:01:00"
-
-## For download of raw images to local filesystem
-#[analysis.data.image_time_interval.calibration1]
-#start = "01:00:00"
-#end = "23:00:00"
-#num = 5
-#tol = "00:10:00"
-#
-#[analysis.data.image_time_interval.calibration2]
-#start = "24:00:00"
-#end = "140:00:00"
-#num = 5
-#tol = "00:10:00"
+[analysis]
+data = ["phase1", "phase3", "phase4"]
 
 [analysis.segmentation.aqueous]
 label = "CO2(aq)"
 mode = "concentration_aq"
-thresholds = [0.001, 0.01, 0.1, 0.5, 0.9]
+thresholds = [0.05, 0.1, 0.5, 0.9]
 color = [0, 255, 0]
-alpha = [0.5, 0.6, 0.7, 0.9, 1.0]
+alpha = [0.6, 0.7, 0.9, 1.0]
 linewidth = 8
 
 [analysis.segmentation.gas]
 label = "CO2(g)"
 mode = "saturation_g"
-thresholds = [0.01, 0.1, 0.5, 0.9]
+thresholds = [0.05, 0.1, 0.5, 0.9]
 color = [255, 0, 0]
 alpha = [0.3, 0.5, 0.7, 0.9]
 linewidth = 5
 
-[analysis.mass.roi.full]
-name = "Full Domain"
-corner_1 = [0.0, 0.0]
-corner_2 = [2.745, 1.5]
-
-[analysis.mass.roi.box1]
-name = "Box 1"
-corner_1 = [0.0, 0.0]
-corner_2 = [1.45, 1.5]
-
-[analysis.mass.roi.box2]
-name = "Box 2"
-corner_1 = [1.45, 0.0]
-corner_2 = [2.745, 1.5]
-
 [analysis.fingers]
 mode = "concentration_aq"
-threshold = 0.01
-
-[analysis.fingers.roi.top]
-name = "Close to Gas-Liquid Interface"
-corner_1 = [0.0, 1.05]
-corner_2 = [2.745, 0.95]
-
-[analysis.fingers.roi.storage]
-name = "Storage Region"
-corner_1 = [0.0, 1.05]
-corner_2 = [2.745, 0.3]
+threshold = 0.05
+roi = ["storage"]
