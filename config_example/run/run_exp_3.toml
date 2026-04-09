@@ -5,7 +5,7 @@ run_id = "Run 3"
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_3_subset_20min_4h"
 baseline = "DSC22892.JPG"
-results = "E:\\fluidflower_glass_beads\\run_exp_3\\results_develop"
+results = "E:\\fluidflower_glass_beads\\run_exp_3\\results_develop_simplified_test"
 
 # Selection of basline images
 [data.path.baseline]
@@ -35,7 +35,7 @@ baseline = "baseline"
 
 # Calibration of color signal to mass
 [color_to_mass]
-data = ["phase1", "phase5"]
+data = ["calibration"]
 
 # Denoising using a simple averaging filter.
 [restoration]

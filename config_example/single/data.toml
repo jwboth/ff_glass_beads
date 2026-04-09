@@ -49,13 +49,16 @@ end = "80:00:00"
 num = 4
 tol = "00:45:00"
 
-[data.interval.phase6]
+[data.interval.phase5]
 start = "100:00:00"
 end = "100:00:00"
 num = 1
 tol = "00:10:00"
 
-[data.interval.phase7]
+[data.time.calibration]
+times = ["00:15:00", "01:00:00", "06:00:00", "20:00:00", "100:00:00"]
+
+[data.interval.phase6]
 start = "120:00:00"
 end = "200:00:00"
 num = 9
