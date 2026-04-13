@@ -5,7 +5,7 @@ run_id = "Run 3"
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_3_subset_20min_4h"
 baseline = "DSC22892.JPG"
-results = "E:\\fluidflower_glass_beads\\run_exp_3\\results_develop_simplified_test"
+results = "E:\\fluidflower_glass_beads\\run_exp_3\\results"
 
 # Selection of basline images
 [data.path.baseline]
@@ -22,15 +22,18 @@ pressure_temperature = [
 
 # Calibration of color paths
 [color_paths]
-ignore_labels = [0, 1]       # water and top layer
+ignore_labels = [1, 2]       # water and top layer
+reference_label = 5          # black - yellow transition.
+data = ["calibration"]
+baseline = "baseline"
+rois = ["calibration1", "calibration2"]
+ignore_baseline_spetcrum = "expanded"
+histogram_weighting = "wls"
+mode = "manual"
 resolution = 51
 num_segments = 3
 threshold_baseline = 0.0
 threshold_calibration = 1e-5 # 1e-4 # Needs tuning (1e-5 too low).
-reference_label = 5          # black - yellow transition.
-data = ["phase1", "phase5"]
-baseline = "baseline"
-#rois = ["roi1", "roi2"]
 
 
 # Calibration of color signal to mass
