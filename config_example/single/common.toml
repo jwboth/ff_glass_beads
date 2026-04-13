@@ -18,6 +18,7 @@ colored_image = "./data_example_simplified/segmented_DSC00160.png"
 [facies]
 props = "./data_example_simplified/facies.xlsx" # excel file with facies properties
 
+
 # Active and inactive corrections
 [corrections]
 # TODO: allow to control which corrections are active and which are not, e.g., for testing purposes
@@ -60,7 +61,7 @@ vertical_center_offset = 405
 
 # Custom corrections
 [corrections.illumination]
-labels = [8]
+labels = [6]
 num_samples = 30
 
 # [corrections.color]
