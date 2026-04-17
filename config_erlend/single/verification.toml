@@ -1,0 +1,19 @@
+[analysis.data.image_time_interval.phase_1]
+start = "01:00:00"
+end = "05:00:00"
+num = 3
+tol = "00:01:00"
+
+[analysis.data.image_time_interval.phase_2]
+start = "12:00:00"
+end = "96:00:00"
+num = 6
+tol = "00:10:00"
+
+[analysis.segmentation.aqueous]
+label = "CO2"
+mode = "mass"
+thresholds = [0.1, 0.5, 1.0, 1.5, 2.0, 2.5]
+color = [0, 255, 0]
+alpha = [0.1, 0.3, 0.5, 0.7, 0.9]
+linewidth = 4

@@ -1,0 +1,60 @@
+[id]
+run_id = "Run 050825"
+
+# Data management
+[data]
+folder = "Z:\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_3_subset_20min_4h"
+baseline = "DSC22892.JPG"
+results = "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\Results_DarSIA\\Ex3"
+
+# Experimental metadata
+[protocols]
+injection = ["C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_ex3.xlsx", "injection"]
+imaging = ["C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_ex3.xlsx", "imaging"]
+pressure_temperature = [
+    "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_ex3.xlsx",
+    "pressure_temperature",
+]
+
+# Calibration of color paths
+[color_paths]
+ignore_labels = [0, 1]
+resolution = 51
+num_segments = 3
+threshold_baseline = 0.0
+threshold_calibration = 1e-4
+reference_label = 5
+
+[color_paths.baseline.image_paths.calibration]
+paths = ["DSC22888.JPG", "DSC22887.JPG", "DSC22886.JPG"]
+
+[color_paths.data.image_time_interval.calibration1]
+start = "01:00:00"
+end = "23:00:00"
+num = 5
+tol = "00:10:00"
+
+[color_paths.data.image_time_interval.calibration2]
+start = "24:00:00"
+end = "140:00:00"
+num = 5
+tol = "00:10:00"
+
+# Calibration of color signal to mass
+[color_to_mass.data.image_time_interval.calibration1]
+start = "01:00:00"
+end = "23:00:00"
+num = 5
+tol = "00:10:00"
+
+#[color_to_mass.data.image_time_interval.calibration2]
+#start = "24:00:00"
+#end = "140:00:00"
+#num = 5
+#tol = "00:10:00"
+
+# Denoising using a simple averaging filter.
+[restoration]
+method = "volume_average"
+[restoration.options]
+rev_size = 0.01 # meters

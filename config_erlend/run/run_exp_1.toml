@@ -1,0 +1,44 @@
+[id]
+run_id = "Run 050825"
+
+# Data management
+[data]
+folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 24-25 glass beads\\050825_glass_beads_1_150_s"
+baseline = "DSC00160.JPG"
+results = "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\Results_DarSIA"
+
+# Selection of basline images
+[data.path.baseline]
+paths = ["DSC00160.JPG"]
+
+# Experimental metadata
+[protocols]
+injection = ["C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_050825.xlsx", "injection"]
+imaging = ["C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_050825.xlsx", "imaging"]
+pressure_temperature = [
+    "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_050825.xlsx",
+    "pressure_temperature",
+]
+
+# Calibration of color paths
+[color_paths]
+ignore_labels = [0, 1]       # water and top layer
+resolution = 51
+num_segments = 3
+threshold_baseline = 0.0
+threshold_calibration = 1e-5 # 1e-4 # Needs tuning (1e-5 too low).
+reference_label = 5          # black - yellow transition.
+data = ["phase1", "phase5"]
+baseline = "baseline"
+#rois = ["roi1", "roi2"]
+
+
+# Calibration of color signal to mass
+[color_to_mass]
+data = ["calibration"]
+
+# Denoising using a simple averaging filter.
+[restoration]
+method = "volume_average"
+[restoration.options]
+rev_size = 0.01 # meters
