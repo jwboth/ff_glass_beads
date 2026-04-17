@@ -2,16 +2,14 @@
 # Fetch here, the velocities over time.
 
 # Usage:
-# python analysis/finger_velocities.py --config config_example/single/common.toml config_example/run/run.toml config_example/single/analysis.toml config_example/single/data.toml
+# python analysis/finger_statistics.py --config config_example/single/common.toml config_example/run/run.toml config_example/single/analysis.toml config_example/single/data.toml
 
-import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 import argparse
 import logging
 from darsia.presets.workflows.analysis.analysis_context import prepare_analysis_context
 from darsia.presets.workflows.rig import Rig
-import pandas as pd
 import json
 
 logger = logging.getLogger(__name__)
@@ -67,8 +65,6 @@ if __name__ == "__main__":
 
     # Extract statistics.
     statistics = results["paths"][roi]["statistics"]
-
-    print(statistics.keys())
 
     # Collect distributions.
     distributions = []
