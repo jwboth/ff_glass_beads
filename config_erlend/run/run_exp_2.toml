@@ -5,7 +5,7 @@ run_id = "Run 050825"
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_2_subset_20min_4h"
 baseline = "DSC05659.JPG"
-results = "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\Results_DarSIA"
+results = "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\Results_DarSIA\\Ex2"
 
 # Selection of basline images
 [data.path.baseline]
@@ -33,9 +33,10 @@ baseline = "baseline"
 #rois = ["roi1", "roi2"]
 
 
+
 # Calibration of color signal to mass
 [color_to_mass]
-data = ["calibration"]
+data = ["paths.all"]
 
 # Denoising using a simple averaging filter.
 [restoration]
