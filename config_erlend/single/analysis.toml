@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [analysis]
 data = ["phase5"]
 
@@ -21,3 +22,28 @@ linewidth = 5
 mode = "concentration_aq"
 threshold = 0.5
 roi = ["storage"]
+=======
+[analysis]
+data = ["phase5"]
+
+[analysis.segmentation.aqueous]
+label = "CO2(aq)"
+mode = "concentration_aq"
+thresholds = [0.05, 0.1, 0.5, 0.9]
+color = [0, 255, 0]
+alpha = [0.6, 0.7, 0.9, 1.0]
+linewidth = 8
+
+[analysis.segmentation.gas]
+label = "CO2(g)"
+mode = "saturation_g"
+thresholds = [0.05, 0.1, 0.5, 0.9]
+color = [255, 0, 0]
+alpha = [0.3, 0.5, 0.7, 0.9]
+linewidth = 5
+
+[analysis.fingers]
+mode = "concentration_aq"
+threshold = 0.5
+roi = ["storage"]
+>>>>>>> a685da14f95bd8ce469312c905d446aeb84c9550
