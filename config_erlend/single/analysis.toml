@@ -1,5 +1,5 @@
 [analysis]
-data = ["paths.all"]
+data = ["all"]
 
 [analysis.segmentation.aqueous]
 label = "CO2(aq)"

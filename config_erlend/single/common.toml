@@ -8,7 +8,8 @@ height = 1.5  # height of the model in m
 
 # Depth measurements
 [depth]
-measurements = "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\depth_measurements.csv"
+measurements = "./data/depth_measurements.csv"
+
 
 # Labels based on segmentation of the reference image (e.g., obtained from manual annotation or from a segmentation routine)
 [labeling]
