@@ -3,10 +3,10 @@ run_id = "Exp 4 - Ulrik"
 
 # Data management
 [data]
-folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
-results = "E:\\ff_glass_beads\\ulrik\\exp_4"
-#folder = "Z:\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
-#results = "C:\\Users\\ula_1\\Documents\\Master FF\\Python\\ff_glass_beads\\results_ex4"
+#folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
+#results = "E:\\ff_glass_beads\\ulrik\\exp_4"
+folder = "Z:\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
+results = "C:\\Users\\ula_1\\Documents\\Master FF\\Python\\ff_glass_beads\\results_ex4"
 baseline = "DSC00200.JPG"
 
 # Selection of basline images
@@ -23,7 +23,7 @@ pressure_temperature = "./protocols/pressure_temperature/exp_4.csv"
 [color_paths]
 basis = "facies"
 mode = "manual"
-ignore_labels = [1,2]       # water and top layer
+ignore_labels = [1, 2]       # water and top layer
 resolution = 21
 num_segments = 3
 threshold_baseline = 0.0
