@@ -1,0 +1,48 @@
+[id]
+run_id = "Exp 4 - Ulrik"
+
+# Data management
+[data]
+folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
+results = "E:\\ff_glass_beads\\ulrik\\exp_4"
+#folder = "Z:\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
+#results = "C:\\Users\\ula_1\\Documents\\Master FF\\Python\\ff_glass_beads\\results_ex4"
+baseline = "DSC00200.JPG"
+
+# Selection of basline images
+[data.path.baseline]
+paths = ["DSC00188.JPG", "DSC00193.JPG", "DSC00198.JPG"]
+
+# Experimental metadata
+[protocols]
+injection = "./protocols/injection/exp_4.csv"
+imaging = "./protocols/imaging/exp_4.csv"
+pressure_temperature = "./protocols/pressure_temperature/exp_4.csv"
+
+# Calibration of color paths
+[color_paths]
+basis = "facies"
+mode = "manual"
+ignore_labels = [1,2]       # water and top layer
+resolution = 21
+num_segments = 3
+threshold_baseline = 0.0
+threshold_calibration = 1e-5 # 1e-4 # Needs tuning (1e-5 too low).
+reference_label = 5          # black - yellow transition.
+data = ["phase1", "phase5"]
+baseline = "baseline"
+#rois = ["roi1", "roi2"]
+histogram_weighting = "wls"
+ignore_baseline_spectrum = "none"
+
+
+# Calibration of color signal to mass
+[color_to_mass]
+data = ["calibration"]
+basis = "facies"
+
+# Denoising using a simple averaging filter.
+[restoration]
+method = "volume_average"
+[restoration.options]
+rev_size = 0.01 # meters

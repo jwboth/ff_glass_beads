@@ -1,0 +1,71 @@
+# ROIs
+[roi.full]
+name = "Full Domain"
+corner_1 = [0.0, 0.0]
+corner_2 = [2.745, 1.5]
+
+[roi.box1]
+name = "Box 1"
+corner_1 = [0.0, 0.0]
+corner_2 = [1.45, 1.5]
+
+[roi.box2]
+name = "Box 2"
+corner_1 = [1.45, 0.0]
+corner_2 = [2.745, 1.5]
+
+[roi.top]
+name = "Close to Gas-Liquid Interface"
+corner_1 = [0.0, 1.05]
+corner_2 = [2.745, 0.95]
+
+[roi.storage]
+name = "Storage Region"
+corner_1 = [0.0, 1.05]
+corner_2 = [2.745, 0.0]
+
+# Data
+[data.interval.phase1]
+start = "01:00:00"
+end = "04:00:00"
+num = 4
+tol = "00:10:00"
+
+[data.interval.phase2]
+start = "08:00:00"
+end = "16:00:00"
+num = 3
+tol = "00:01:00"
+
+[data.interval.phase3]
+start = "06:00:00"
+end = "10:00:00"
+num = 5
+tol = "00:10:00"
+
+[data.interval.phase4]
+start = "20:00:00"
+end = "80:00:00"
+num = 4
+tol = "00:45:00"
+
+[data.interval.phase5]
+start = "100:00:00"
+end = "100:00:00"
+num = 1
+tol = "00:10:00"
+
+[data.time.calibration]
+times = ["06:00:00", "20:00:00", "60:00:00", "100:00:00"]
+
+[data.interval.phase6]
+start = "120:00:00"
+end = "200:00:00"
+num = 9
+tol = "00:15:00"
+
+#[data.path.all]
+#paths = "*.JPG"
+
+#[data.path.some]
+#paths = ["DSC00160.JPG", "DSC00400", "DSC00640", "DSC01120", "DSC02080", "DSC04000"]
