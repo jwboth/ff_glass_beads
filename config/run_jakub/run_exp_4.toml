@@ -5,68 +5,14 @@ run_id = "Run 4"
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
 baseline = "DSC00200.JPG"
-results = "E:\\fluidflower_glass_beads\\run_exp_4\\results"
+results = "E:\\ff_glass_beads\\exp_4"
 
-# Experimental metadata
-[protocols]
-injection = ["./data_example/protocol_exp_4.xlsx", "injection"]
-imaging = ["./data_example/protocol_exp_4.xlsx", "imaging"]
-pressure_temperature = [
-    "./data_example/protocol_exp_4.xlsx",
-    "pressure_temperature",
-]
-
-# Calibration of color paths
-[color_paths]
-ignore_labels = [0, 1]       # water and top layer
-resolution = 51
-num_segments = 3
-threshold_baseline = 0.0
-threshold_calibration = 1e-4 # Needs tuning (1e-5 too low).
-reference_label = 5          # black - yellow transition.
-
-[color_paths.baseline.image_paths.calibration]
+# Runspecific baseline images
+[data.path.baseline]
 paths = ["DSC00185.JPG", "DSC00190.JPG", "DSC00195.JPG", "DSC00200.JPG"]
 
-[color_paths.data.image_time_interval.calibration1]
-start = "00:15:00"
-end = "00:15:00"
-num = 1
-tol = "00:10:00"
-
-[color_paths.data.image_time_interval.calibration2]
-start = "01:00:00"
-end = "10:00:00"
-num = 5
-tol = "00:10:00"
-
-[color_paths.data.image_time_interval.calibration3]
-start = "20:00:00"
-end = "90:00:00"
-num = 4
-tol = "00:45:00"
-
-# Calibration of color signal to mass
-[color_to_mass.data.image_time_interval.calibration1]
-start = "00:15:00"
-end = "00:15:00"
-num = 1
-tol = "00:10:00"
-
-[color_to_mass.data.image_time_interval.calibration2]
-start = "01:00:00"
-end = "10:00:00"
-num = 5
-tol = "00:10:00"
-
-[color_to_mass.data.image_time_interval.calibration3]
-start = "20:00:00"
-end = "90:00:00"
-num = 4
-tol = "00:45:00"
-
-# Denoising using a simple averaging filter.
-[restoration]
-method = "volume_average"
-[restoration.options]
-rev_size = 0.01 # meters
+# Run-specific experimental metadata
+[protocols]
+imaging = "./protocols/imaging/exp_4.csv"
+injection = "./protocols/injection/exp_4.csv"
+pressure_temperature = "./protocols/pressure_temperature/exp_4.csv"
