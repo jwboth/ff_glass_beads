@@ -1,0 +1,3 @@
+﻿ID,location_x,location_y,Start,End,Rate_sccm,density kg/m3,Comments
+1,0.5,0.5,2026-03-28 10:07:15,2026-03-28 10:22:15,50,1.872,known rate
+2,0.5,0.5,2026-03-28 10:22:15,2026-04-11 15:00:00,10,1.872,injection stopped

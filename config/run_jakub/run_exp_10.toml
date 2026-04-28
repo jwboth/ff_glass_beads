@@ -3,16 +3,16 @@ run_id = "Run 3"
 
 # Runspecific data management
 [data]
-folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_3_subset_20min_4h"
-baseline = "DSC22892.JPG"
+folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_10_subset_20min_4h"
+baseline = "DSC00424.JPG"
 results = "E:\\ff_glass_beads\\exp_3"
 
 # Runspecific baseline images
 [data.path.baseline]
-paths = ["DSC22892.JPG", "DSC22888.JPG", "DSC22887.JPG"]
+paths = ["DSC00424.JPG", "DSC00423.JPG", "DSC00422.JPG"]
 
 # Run-specific experimental metadata
 [protocols]
-imaging = "./protocols/imaging/exp_3.csv"
-injection = "./protocols/injection/exp_3.csv"
-pressure_temperature = "./protocols/pressure_temperature/exp_3.csv"
+imaging = "./protocols/imaging/exp_10.csv"
+injection = "./protocols/injection/exp_10.csv"
+pressure_temperature = "./protocols/pressure_temperature/exp_10.csv"
