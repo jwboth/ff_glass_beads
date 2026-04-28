@@ -1,10 +1,26 @@
 [analysis]
 data = ["phase1", "phase2", "phase3", "phase4", "phase5"]
+# TODO: allow for global options: data, restoration.
 
+[analysis.mass]
+color = "relative_colorpath"
+# restoration = "my_restoration" if there is multiple... add user output if none is chosen.
+
+[analysis.fingers]
+#mode = "concentration_aq"
+mode = "custom_hsv_range"
+threshold = 0.1
+roi = ["storage"]
+# TODO: restoration = "my_restoration" if there is multiple...
+
+
+####################################################
+# SEGMENTATION
+####################################################
 [analysis.segmentation.aqueous]
 label = "CO2(aq)"
 mode = "concentration_aq"
-thresholds = [0.05, 0.1, 0.5, 0.9]
+thresholds = [0.01, 0.1, 0.5, 0.9]
 color = [0, 255, 0]
 alpha = [0.6, 0.7, 0.9, 1.0]
 linewidth = 8
@@ -17,44 +33,67 @@ value_min_distance_px = 35
 value_max_per_contour = 4
 value_format = "{:.2f}"
 
+#[analysis.segmentation.gas]
+#label = "CO2(g)"
+#mode = "saturation_g"
+#thresholds = [0.01, 0.05, 0.5]
+#color = [255, 0, 0]
+#alpha = [0.6, 0.9, 1.0]
+#linewidth = 5
+
 [analysis.segmentation.gas]
 label = "CO2(g)"
-mode = "saturation_g"
-thresholds = [0.05, 0.1, 0.5, 0.9]
+mode = "custom_hsv_range"
+thresholds = [0.5]
 color = [255, 0, 0]
-alpha = [0.3, 0.5, 0.7, 0.9]
+alpha = [1.0]
 linewidth = 5
 
-[analysis.fingers]
-mode = "concentration_aq"
-threshold = 0.2
-roi = ["storage"]
-
+####################################################
+# THRESHOLDING
+####################################################
 [analysis.thresholding]
-# Optional thresholding with per-layer styling and separate format outputs.
-formats = ["jpg", "npz"]
+formats = ["jpg"]
 
-[analysis.thresholding.layers.gas]
-mode = "saturation_g"
-threshold = 0.05
-label = "Gas plume"
-fill = [255, 0, 0]
-stroke = [255, 255, 255]
-fill_alpha = 0.35
-stroke_width = 2
-
-[analysis.thresholding.layers.aq]
+[analysis.thresholding.layer.aq]
 mode = "concentration_aq"
-threshold = 0.05
+threshold_min = 0.05
 label = "Aqueous plume"
 fill = [0, 0, 255]
 stroke = [255, 255, 255]
-fill_alpha = 0.35
+fill_alpha = 1.0
+stroke_width = 2
+
+[analysis.thresholding.layer.gas]
+mode = "saturation_g"
+threshold_min = 0.05
+label = "Gas plume"
+fill = [255, 0, 0]
+stroke = [255, 255, 255]
+fill_alpha = 1.0
+stroke_width = 2
+
+[analysis.thresholding.layer.red]
+mode = "my_red"
+threshold_min = 0.05
+label = "High red channel"
+fill = [255, 255, 0]
+stroke = [255, 255, 255]
+fill_alpha = 1.0
+stroke_width = 2
+
+[analysis.thresholding.layer.green_hsv_band]
+mode = "custom_hsv_range"
+threshold_min = 0.05
+label = "HSV green range"
+fill = [0, 255, 0]
+stroke = [255, 255, 255]
+fill_alpha = 1.0
 stroke_width = 2
 
 [analysis.thresholding.legend]
 show = true
-font_scale = 0.7
+font_scale = 2.0
 thickness = 2
 position = [20, 20]
 text_color = [255, 255, 255]
@@ -62,4 +101,3 @@ box_enabled = true
 box_color = [0, 0, 0]
 box_alpha = 0.4
 box_padding = 10
-

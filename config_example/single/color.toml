@@ -1,0 +1,37 @@
+[color.path.relative_colorpath]
+mode = "relative"
+basis = "facies"
+ignore_labels = [1, 2]                # water and top layer
+resolution = 21
+num_segments = 3
+reference_label = 5                   # black - yellow transition.
+
+# TODO move in a future PR to calibration.color
+#[calibration.color.options]
+
+calibration_mode = "manual"
+baseline = "baseline"
+data = ["calibration"]
+# TODO: Allow for unions of rois.
+#rois = ["down"] #, "calibration1", "calibration2"]
+ignore_baseline_spectrum = "baseline"
+histogram_weighting = "threshold"
+threshold_baseline = 0.0
+threshold_calibration = 0.0           # 1e-4 # Needs tuning (1e-5 too low).
+
+[color.range.custom_hsv_range]
+mode = "absolute"
+color_space = "HSV"
+# TODO: Allow for storing and loading this range, tuned by calibration.
+range = [[0.08, 0.4], [0.3, 1.0], [0.5, "none"]]
+#baseline = "baseline"
+#data = ["calibration"]
+
+# TODO: introduce calibration of hsv here.
+
+[color.channel.my_red]
+color_space = "RGB"
+channel = "r"
+# TODO: Allow for heterogneous rescaling
+#baseline = "baseline"
+#data = ["calibration"]

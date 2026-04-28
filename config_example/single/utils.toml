@@ -1,12 +1,13 @@
-
+[download]
 # For download of raw images to local filesystem
-#[download]
-#source = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 24-25 glass beads\\050825_glass_beads_1_150_s"
+source = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_3_subset_20min_4h"
+data = ["phase1", "phase2", "phase3", "phase4", "phase5", "phase6", "baseline", "calibration"]
 
 [video]
+# Extract videos from results.
 
 [video.source]
-folder = "fingers/tips/storage"                # relative to [data.results] when not absolute
+folder = "fingers/tips/storage" # relative to [data.results] when not absolute
 extensions = [".png"]
 recursive = false
 
