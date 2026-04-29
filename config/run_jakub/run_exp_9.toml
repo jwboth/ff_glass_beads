@@ -4,12 +4,12 @@ run_id = "Run 9"
 # Data management
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_9_subset_20min_4h"
-baseline = "None"
+baseline = "DSC00570.JPG"
 results = "E:\\ff_glass_beads\\exp_9"
 
 # Runspecific baseline images
 [data.path.baseline]
-paths = ["None"]
+paths = ["DSC00570.JPG", "DSC00568.JPG", "DSC00566.JPG"]
 
 # Run-specific experimental metadata
 [protocols]

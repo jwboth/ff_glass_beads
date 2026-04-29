@@ -4,7 +4,7 @@ run_id = "Run 1"
 # Data management
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_1_subset_20min_4h"
-baseline = "DSC00160.JPG"
+baseline = "DSC00163.JPG"
 results = "E:\\ff_glass_beads\\exp_1"
 
 # Runspecific baseline images

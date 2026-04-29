@@ -9,7 +9,7 @@ results = "E:\\ff_glass_beads\\exp_4"
 
 # Runspecific baseline images
 [data.path.baseline]
-paths = ["DSC00185.JPG", "DSC00190.JPG", "DSC00195.JPG", "DSC00200.JPG"]
+paths = ["DSC00190.JPG", "DSC00195.JPG", "DSC00200.JPG"]
 
 # Run-specific experimental metadata
 [protocols]
