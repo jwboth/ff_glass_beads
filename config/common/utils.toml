@@ -1,7 +1,7 @@
-[download]
+#[download]
 # For download of raw images to local filesystem
-source = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_3_subset_20min_4h"
-data = ["phase1", "phase2", "phase3", "phase4", "phase5", "phase6", "baseline", "calibration"]
+#source = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_1_subset_20min_4h"
+#data = ["calibration"]
 
 [video]
 # Extract videos from results.

@@ -7,8 +7,8 @@ color = "relative_colorpath"
 # restoration = "my_restoration" if there is multiple... add user output if none is chosen.
 
 [analysis.fingers]
-#mode = "concentration_aq"
-mode = "custom_hsv_range"
+mode = "concentration_aq"
+#mode = "custom_hsv_range"
 threshold = 0.1
 roi = ["storage"]
 # TODO: restoration = "my_restoration" if there is multiple...
