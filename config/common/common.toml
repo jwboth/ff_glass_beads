@@ -10,13 +10,14 @@ height = 1.5  # height of the model in m
 [depth]
 measurements = "./data/depth_measurements.csv"
 
-# Labels based on segmentation of the reference image (e.g., obtained from manual annotation or from a segmentation routine)
+# Labels based on segmentation of the reference image
+# (e.g., obtained from manual annotation or from a segmentation routine)
 [labeling]
 colored_image = "./data/segmented_DSC00160.png"
 
 # Facies properties and mapping to labels in the segmented image
 [facies]
-props = "./data/facies.csv" # excel file with facies properties
+props = "./data/facies.csv"
 
 
 # Active and inactive corrections
