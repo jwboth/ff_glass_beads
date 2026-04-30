@@ -21,7 +21,7 @@ corner_2 = [2.745, 0.95]
 
 [roi.storage]
 name = "Storage Region"
-corner_1 = [0.0, 1.05]
+corner_1 = [0.0, 1.015]
 corner_2 = [2.745, 0.0]
 
 # Data
@@ -50,9 +50,9 @@ num = 4
 tol = "00:45:00"
 
 [data.interval.phase5]
-start = "00:00:00"
+start = "36:00:00"
 end = "72:00:00"
-num = 10
+num = 3
 tol = "00:10:00"
 
 [data.time.calibration]

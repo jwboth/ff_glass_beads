@@ -22,5 +22,5 @@ linewidth = 5
 
 [analysis.fingers]
 mode = "concentration_aq"
-threshold = 0.5
+threshold = 0.25
 roi = ["storage"]
