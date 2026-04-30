@@ -11,39 +11,12 @@ results = "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\Results_Da
 [data.path.baseline]
 paths = ["DSC05659.JPG"]
 
-# Experimental metadata
+# Run-specific experimental metadata
 [protocols]
-injection = ["C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_ex2.xlsx", "injection"]
-imaging = ["C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_ex2.xlsx", "imaging"]
-pressure_temperature = [
-    "C:\\Users\\erlen\\OneDrive - University of Bergen\\Master\\DarSIA\\ff_glass_beads\\data\\protocol_ex2.xlsx",
-    "pressure_temperature",
-]
-
-# Calibration of color paths
-[color_paths]
-basis = "facies"
-mode = "manual"
-ignore_labels = [1, 2]       # water and top layer
-resolution = 21
-num_segments = 3
-threshold_baseline = 0.0
-threshold_calibration = 1e-5 # 1e-4 # Needs tuning (1e-5 too low).
-reference_label = 5          # black - yellow transition.
-data = "paths.all"
-baseline = "baseline"
-#rois = ["roi1", "roi2"]
-histogram_weighting = "wls"
-ignore_baseline_spectrum = "none"
+imaging = "./protocols/imaging/exp_2.csv"
+injection = "./protocols/injection/exp_2.csv"
+pressure_temperature = "./protocols/pressure_temperature/exp_2.csv"
 
 
 
-# Calibration of color signal to mass
-[color_to_mass]
-data = "paths.all"
 
-# Denoising using a simple averaging filter.
-[restoration]
-method = "volume_average"
-[restoration.options]
-rev_size = 0.01 # meters
