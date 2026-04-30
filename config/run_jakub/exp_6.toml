@@ -1,0 +1,18 @@
+[id]
+run_id = "Run 6"
+
+# Runspecific data management
+[data]
+folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_6_subset_20min_4h"
+baseline = "DSC00020.JPG"
+results = "E:\\ff_glass_beads\\exp_6"
+
+# Runspecific baseline images
+[data.path.baseline]
+paths = ["DSC00020.JPG", "DSC00018.JPG", "DSC00016.JPG"]
+
+# Run-specific experimental metadata
+[protocols]
+imaging = "./protocols/imaging/exp_6.csv"
+injection = "./protocols/injection/exp_6.csv"
+pressure_temperature = "./protocols/pressure_temperature/exp_6.csv"

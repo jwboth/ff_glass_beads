@@ -1,0 +1,7 @@
+# Denoising using a simple averaging filter.
+[restoration]
+method = "volume_average"
+
+[restoration.options]
+rev_size = 0.01 # meters
+

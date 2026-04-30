@@ -1,0 +1,24 @@
+# Run specific configuration for experiment 4 - flush
+[id]
+run_id = "Experiment 4 - Flush"
+
+# Data management
+[data]
+folder = "E:\\flush exp 4"
+baseline = "DSC04574.JPG"
+results = "E:\\ff_glass_beads\\exp_4_flush"
+
+# Run-specific experimental metadata
+[protocols]
+imaging = "./protocols/imaging/exp_4_flush.csv"
+injection = "./protocols/injection/exp_4_flush.csv"
+pressure_temperature = "./protocols/pressure_temperature/exp_4_flush.csv"
+
+# # Calibration of color to volume (for tracer)
+# [color_to_volume]
+# mode = "manual"
+# fluid = "tracer"
+# [color_to_volume.data.image_paths.calibration]
+# paths = ["*4580*"]
+# #paths = ["*4639*"]
+# #paths = ["*04574*", "*0.JPG"]

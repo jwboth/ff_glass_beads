@@ -1,0 +1,18 @@
+[id]
+run_id = "Run 4"
+
+# Data management
+[data]
+folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_4_subset_20min_4h"
+baseline = "DSC00200.JPG"
+results = "E:\\ff_glass_beads\\exp_4"
+
+# Runspecific baseline images
+[data.path.baseline]
+paths = ["DSC00190.JPG", "DSC00195.JPG", "DSC00200.JPG"]
+
+# Run-specific experimental metadata
+[protocols]
+imaging = "./protocols/imaging/exp_4.csv"
+injection = "./protocols/injection/exp_4.csv"
+pressure_temperature = "./protocols/pressure_temperature/exp_4.csv"
