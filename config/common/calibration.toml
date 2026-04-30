@@ -1,7 +1,10 @@
+[calibration]
+data = ["calibration"]
+
 [calibration.color]
 color = "relative_colorpath"
 # TODO: move data from color paths here...
 
 [calibration.mass]
+data = "calibration" # TODO rm.
 color = "relative_colorpath"
-data = ["calibration"]

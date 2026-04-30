@@ -4,6 +4,7 @@ data = ["phase1", "phase2", "phase3", "phase4", "phase5"]
 
 [analysis.mass]
 color = "relative_colorpath"
+#color = "custom_hsv_range"
 # restoration = "my_restoration" if there is multiple... add user output if none is chosen.
 
 [analysis.fingers]
