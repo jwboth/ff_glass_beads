@@ -1,5 +1,5 @@
 [analysis]
-data = ["all"]
+data = "all"
 
 [analysis.segmentation.aqueous]
 label = "CO2(aq)"
@@ -27,7 +27,7 @@ linewidth = 5
 
 [analysis.fingers]
 mode = "concentration_aq"
-threshold = 0.2
+threshold = 0.1
 roi = ["storage"]
 
 [analysis.thresholding]
@@ -63,6 +63,4 @@ box_color = [0, 0, 0]
 box_alpha = 0.4
 box_padding = 10
 
-#[helper.roi] 
-#data = "paths.all" 
 
