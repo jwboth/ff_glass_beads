@@ -8,21 +8,23 @@
 
 [video.source]
 folder = "fingers/tips/storage" # relative to [data.results] when not absolute
-extensions = [".png"]
+#folder = "fingers/paths/storage" # relative to [data.results] when not absolute
+#folder = "segmentation/jpg" # relative to [data.results] when not absolute
+#extensions = [".jpg"]
 recursive = false
 
 [video.output]
 formats = ["mp4"]
-fps = 2.0
+fps = 10.0
 codec = "mp4v"
-quality = 95
+quality = 50
 # resolution = [1280, 720] # optional [width, height]
 
 [video.overlay]
 show_elapsed_time = true
 elapsed_time_format = "Elapsed: {:.2f} h"
 show_note = true
-note = "Experiment #3 - Segmentation"
+note = "Experiment #1 - Segmentation"
 font_scale = 2.5
 thickness = 2
 text_color = [255, 255, 255]

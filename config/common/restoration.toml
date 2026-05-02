@@ -1,7 +1,7 @@
-# Denoising using a simple averaging filter.
+# Volume averaging.
 [restoration]
 method = "volume_average"
-
+ignore = ["boolean_porosity", "inner_labels"]
 [restoration.options]
-rev_size = 0.01 # meters
+rev_size = 0.02 # meters
 

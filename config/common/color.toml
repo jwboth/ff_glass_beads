@@ -4,20 +4,14 @@ basis = "facies"
 ignore_labels = [1, 2]                # water and top layer
 resolution = 21
 num_segments = 3
-reference_label = 5                   # black - yellow transition.
-
-# TODO move in a future PR to calibration.color
-#[calibration.color.options]
-
+reference_label = 6                   # black - yellow transition.
 calibration_mode = "manual"
 baseline = "baseline"
 data = ["calibration"]
-# TODO: Allow for unions of rois.
-#rois = ["down"] #, "calibration1", "calibration2"]
-ignore_baseline_spectrum = "baseline"
-histogram_weighting = "threshold"
+ignore_baseline_spectrum = "none"
+histogram_weighting = "threshold" # wls?
 threshold_baseline = 0.0
-threshold_calibration = 0.0           # 1e-4 # Needs tuning (1e-5 too low).
+threshold_calibration = 1e-3
 
 [color.range.custom_hsv_range]
 mode = "absolute"
