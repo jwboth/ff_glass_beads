@@ -8,13 +8,14 @@
 
 [video.source]
 folder = "fingers/tips/storage" # relative to [data.results] when not absolute
+#folder = "fingers/paths/storage" # relative to [data.results] when not absolute
 #folder = "segmentation/jpg" # relative to [data.results] when not absolute
-extensions = [".jpg"]
+#extensions = [".jpg"]
 recursive = false
 
 [video.output]
 formats = ["mp4"]
-fps = 2.0
+fps = 10.0
 codec = "mp4v"
 quality = 50
 # resolution = [1280, 720] # optional [width, height]

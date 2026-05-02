@@ -1,7 +1,9 @@
 [analysis]
-#data = ["phase5"]
-data = ["phase1", "phase2", "phase3", "phase4", "phase5"]
+data = ["active_fingers"]
+#data = ["phase1", "phase2", "phase3", "phase4", "phase5"]
+#data = "all"
 # TODO: allow for global options: data, restoration.
+random_traverse = true
 formats = ["jpg"] # Defines output type for analysis.
 
 [analysis.mass]
@@ -15,9 +17,9 @@ polyorder = 3
 
 
 [analysis.fingers]
-mode = "concentration_aq" # Choose from std modes ("mass", "cconcentration_aq", ...) or "id" among color.*.<id>.
+mode = "concentration_aq" # Choose from std modes ("mass", "concentration_aq", ...) or "id" among color.*.<id>.
 #mode = "custom_hsv_range"
-threshold = 0.1 # Choose sufficiently low.
+threshold = 0.025 # Choose sufficiently low.
 roi = ["storage"] # Choose such that the top boundary crosses the plume.
 reduce_to_main_contour = true # If true, removes all small features.
 fill_holes = false # If true, holes in segmentation will be filled.
@@ -35,9 +37,9 @@ polyorder = 3
 [analysis.segmentation.aqueous]
 label = "CO2(aq)"
 mode = "concentration_aq"
-thresholds = [0.2, 0.3, 0.4, 0.5, 0.6]
+thresholds = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 color = [255, 113, 107]
-alpha = [0.6, 0.7, 0.8, 0.9, 1.0]
+alpha = [0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0]
 linewidth = 8
 show_values = false
 value_color = [255, 255, 255]
@@ -55,9 +57,9 @@ polyorder = 3
 [analysis.segmentation.aqueous_low]
 label = "CO2(aq)"
 mode = "concentration_aq"
-thresholds = [0.05, 0.1]
+thresholds = [0.025, 0.05, 0.1]
 color = [255, 113, 107]
-alpha = [0.2, 0.4]
+alpha = [0.05, 0.2, 0.4]
 linewidth = 8
 show_values = false
 value_color = [255, 255, 255]

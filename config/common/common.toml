@@ -62,9 +62,9 @@ vertical_stretch = -0.0
 vertical_center_offset = 405
 
 # Custom corrections
-#[corrections.illumination]
-#labels = [6]
-#num_samples = 30
+# [corrections.illumination]
+# labels = [7]
+# num_samples = 30
 
 # [corrections.color]
 # colorchecker = "upper_left"
