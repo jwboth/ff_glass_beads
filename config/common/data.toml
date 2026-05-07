@@ -21,7 +21,7 @@ corner_2 = [2.745, 0.95]
 
 [roi.storage]
 name = "Storage Region"
-corner_1 = [0.0, 1.05]
+corner_1 = [0.0, 1.03]
 corner_2 = [2.745, 0.0]
 
 [roi.calibration1]
@@ -72,7 +72,7 @@ tol = "05:00:00"
 
 [data.time.calibration]
 #times = ["00:20:00", "06:00:00", "20:00:00", "60:00:00", "120:00:00", "180:00:00"]
-times = ["20:00:00", "180:00:00"]
+times = ["00:40:00", "20:00:00", "180:00:00"]
 
 [data.interval.phase6]
 start = "120:00:00"
@@ -81,7 +81,7 @@ num = 9
 tol = "00:15:00"
 
 [data.interval.active_fingers]
-start = "24:00:00"
+start = "00:20:00"
 end = "70:00:00"
 
 [data.interval.active_fingers2]

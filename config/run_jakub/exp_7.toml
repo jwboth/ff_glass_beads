@@ -3,9 +3,9 @@ run_id = "Run 7"
 
 # Runspecific data management
 [data]
-folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_7_subset_20min_4h"
+folders = ["\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_7_20min_4h_part1", "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_7_20min_4h_part2"] 
 baseline = "DSC00054.JPG"
-results = "E:\\ff_glass_beads\\exp_7"
+results = "E:\\ff_glass_beads\\7_layers_without_illumination\\exp_7"
 
 # Runspecific baseline images
 [data.path.baseline]
@@ -13,6 +13,9 @@ paths = ["DSC00054.JPG", "DSC00052.JPG", "DSC00050.JPG"]
 
 # Run-specific experimental metadata
 [protocols]
-imaging = "./protocols/imaging/exp_7.csv"
 injection = "./protocols/injection/exp_7.csv"
 pressure_temperature = "./protocols/pressure_temperature/exp_7.csv"
+
+[protocols.imaging]
+"\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_7_20min_4h_part1" = "./protocols/imaging/exp_7_part1.csv"
+"\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_7_20min_4h_part2" = "./protocols/imaging/exp_7_part2.csv"

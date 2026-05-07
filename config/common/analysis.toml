@@ -1,5 +1,5 @@
 [analysis]
-data = ["active_fingers"]
+data = "active_fingers"
 #data = ["phase1", "phase2", "phase3", "phase4", "phase5"]
 #data = "all"
 # TODO: allow for global options: data, restoration.
@@ -15,19 +15,26 @@ contour_smoother = "savitzky_golay" # If chosen, contours are smoothed during ca
 window_length = 41
 polyorder = 3
 
-
 [analysis.fingers]
 mode = "concentration_aq" # Choose from std modes ("mass", "concentration_aq", ...) or "id" among color.*.<id>.
-#mode = "custom_hsv_range"
 threshold = 0.025 # Choose sufficiently low.
 roi = ["storage"] # Choose such that the top boundary crosses the plume.
+
+# Options for simplifying the analyzed contour
 reduce_to_main_contour = true # If true, removes all small features.
 fill_holes = false # If true, holes in segmentation will be filled.
+
+# Extra analysis options.
+include_skeleton_analysis = true
+
+# Extra analysis of int
+include_gradient_based_analysis = true
+gradient_mode = "restricted_hue"
+
+# Smoothing of the contour
 contour_smoother = "savitzky_golay" # If chosen, contours are smoothed.
-
-
 [analysis.fingers.contour_smoother_options]
-window_length = 61
+window_length = 41
 polyorder = 3
 
 ####################################################

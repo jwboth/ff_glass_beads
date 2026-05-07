@@ -5,7 +5,7 @@ run_id = "Run 2"
 [data]
 folder = "\\\\klient.uib.no\\FELLES\\LAB-IT\\IFT\\resfys\\FluidFlower\\FF2 25-26 masterdata fra 101\\Subset_20min_4h\\Experiment_2_subset_20min_4h"
 baseline = "DSC05659.JPG"
-results = "E:\\ff_glass_beads\\exp_2"
+results = "E:\\ff_glass_beads\\7_layers_without_illumination\\exp_2"
 
 # Runspecific baseline images
 [data.path.baseline]

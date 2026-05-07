@@ -6,7 +6,7 @@ run_id = "Experiment 4 - Flush"
 [data]
 folder = "E:\\flush exp 4"
 baseline = "DSC04574.JPG"
-results = "E:\\ff_glass_beads\\exp_4_flush"
+results = "E:\\ff_glass_beads\\7_layers_without_illumination\\exp_4_flush"
 
 # Run-specific experimental metadata
 [protocols]
