@@ -32,6 +32,7 @@ channel = "r"
 
 
 [color.channel.restricted_hue]
+mode = "absolute"
 color_space = "HSV"
 channel = "h"
 
