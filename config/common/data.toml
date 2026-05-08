@@ -21,7 +21,7 @@ corner_2 = [2.745, 0.95]
 
 [roi.storage]
 name = "Storage Region"
-corner_1 = [0.0, 1.03]
+corner_1 = [0.0, 1.04]
 corner_2 = [2.745, 0.0]
 
 [roi.calibration1]

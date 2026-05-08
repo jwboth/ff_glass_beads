@@ -16,8 +16,15 @@ threshold_calibration = 1e-3
 [color.range.custom_hsv_range]
 mode = "absolute"
 color_space = "HSV"
+range = [[0.1, 0.4], [0.0, 1.0], [0.6, "none"]]
+
+[color.range.custom_hsv_range.restoration]
+method = "volume_average"
+ignore = ["boolean_porosity", "inner_labels"]
+[color.range.custom_hsv_range.restoration.options]
+rev_size = 0.005 # meters
+
 # TODO: Allow for storing and loading this range, tuned by calibration.
-range = [[0.08, 0.4], [0.3, 1.0], [0.5, "none"]]
 #baseline = "baseline"
 #data = ["calibration"]
 
@@ -40,7 +47,7 @@ channel = "h"
 [color.channel.restricted_hue.mask]
 mode = "absolute"
 color_space = "HSV"
-range = [[0.08, 0.4], [0.3, 1.0], [0.5, "none"]]
+range = [[0.08, 0.4], [0.3, 1.0], [0.7, "none"]]
 # TODO: Allow for storing and loading this range, tuned by calibration.
 #baseline = "baseline"
 #data = ["calibration"]
@@ -49,5 +56,5 @@ range = [[0.08, 0.4], [0.3, 1.0], [0.5, "none"]]
 method = "volume_average"
 ignore = ["boolean_porosity", "inner_labels"]
 [color.channel.restricted_hue.restoration.options]
-rev_size = 0.001 # meters
+rev_size = 0.005 # meters
 

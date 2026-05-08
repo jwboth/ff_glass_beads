@@ -27,9 +27,10 @@ fill_holes = false # If true, holes in segmentation will be filled.
 # Extra analysis options.
 include_skeleton_analysis = true
 
-# Extra analysis of int
+# Extra analysis of interface
 include_gradient_based_analysis = true
-gradient_mode = "restricted_hue"
+#gradient_mode = "restricted_hue"
+gradient_mode = "custom_hsv_range"
 
 # Smoothing of the contour
 contour_smoother = "savitzky_golay" # If chosen, contours are smoothed.
