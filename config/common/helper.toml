@@ -24,4 +24,5 @@ cmap = "matplotlib.viridis"
 # Optional ROI keys from top-level [roi.*]; when omitted, full image is used.
 # roi = ["main"]
 
-# TODO: [helper.color] ...
+[helper.color]
+# TODO: Do not require section as it actually is empty.
