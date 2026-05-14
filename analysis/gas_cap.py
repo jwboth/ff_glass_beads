@@ -36,6 +36,9 @@ def _specific_analysis(
     # Compute the min and max row indices of the gas cap. Note that in image coordinates,
     # the row index corresponds to the vertical position. Also row (ascending) -> y (descending).
     # Thus, flip min->max.
+    if len(points[0]) == 0:
+        logger.warning("No gas phase detected in the image. Returning thickness of 0.")
+        return 0.0
     min_row = points[0].max()
     max_row = points[0].min()
 
